@@ -41,7 +41,7 @@ TODO Abstract
 
 # Introduction
 
-- MIMI currently doesn't make assumptions about names beyond the URI format introduced in {{!I-D.draft-mimi-protocol}}
+- MIMI currently doesn't make assumptions about names beyond the URI format introduced in {{!I-D.draft-ietf-mimi-protocol}}
 - Different messaging applications use different schemes
 - MIMI should be able to support at least the most widely used ones
 
@@ -54,7 +54,7 @@ TODO Abstract
 - Often chosen by user
 - Multiple identifiers per user possible
 - User can add/delete identifiers dynamically
-- Examples: 
+- Examples:
   - Phone numbers
   - Signal-style usernames
   - Matrix-style usernames
@@ -68,7 +68,7 @@ TODO Abstract
 - Can be provider-generated
 - Server might not be able to link admin to connection establishment identifiers
 - Immutable
-- Examples 
+- Examples
   - UUIDs
   - Matrix-style usernames
 
