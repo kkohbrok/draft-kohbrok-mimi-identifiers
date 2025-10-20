@@ -25,6 +25,10 @@ author:
     fullname: "Konrad Kohbrok"
     organization: "Phoenix R&D"
     email: "konrad@ratchet.ing"
+ -
+    fullname: "Raphael Robert"
+    organization: "Phoenix R&D"
+    email: "ietf@raphaelrobert.com"
 
 normative:
 
