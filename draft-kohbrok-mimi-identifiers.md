@@ -11,9 +11,7 @@ v: 3
 area: "Applications and Real-Time"
 workgroup: "More Instant Messaging Interoperability"
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+ - identity
 venue:
   group: "More Instant Messaging Interoperability"
   type: "Working Group"
@@ -25,8 +23,8 @@ venue:
 author:
  -
     fullname: "Konrad Kohbrok"
-    organization: Your Organization Here
-    email: "konrad.kohbrok@datashrine.de"
+    organization: "Phoenix R&D"
+    email: "konrad@ratchet.ing"
 
 normative:
 
@@ -43,13 +41,67 @@ TODO Abstract
 
 # Introduction
 
-TODO Introduction
+- MIMI currently doesn't make assumptions about names beyond the URI format introduced in {{!I-D.draft-mimi-protocol}}
+- Different messaging applications use different schemes
+- MIMI should be able to support at least the most widely used ones
 
+# Identifier types
 
-# Conventions and Definitions
+## Identifiers for connection establishment
 
-{::boilerplate bcp14-tagged}
+- Globally unique
+- User-facing
+- Often chosen by user
+- Multiple identifiers per user possible
+- User can add/delete identifiers dynamically
+- Examples: 
+  - Phone numbers
+  - Signal-style usernames
+  - Matrix-style usernames
+  - Administrative identifiers
 
+## Administrative identifiers
+
+- Globally unique
+- Generally not user-facing
+- Generally not chosen-facing
+- Can be provider-generated
+- Server might not be able to link admin to connection establishment identifiers
+- Immutable
+- Examples 
+  - UUIDs
+  - Matrix-style usernames
+
+## Display names (decorative identifiers)
+
+- Not globally unique
+- Not necessarily visible to provider
+- User-facing
+- User-chosen
+
+# Proposal for MIMI
+
+## Connection establishment
+
+- Multiple options for connection establishment identifiers
+  - Phone numbers (draft WIP)
+  - Usernames (user chosen names, potentially with format restrictions)
+- No requirement for providers to be able to link connection establishment
+  identifiers with administrative identifiers
+- Ephemeral identifiers should be allowed
+
+## Administrative identifiers
+
+- Should be unique within domain of provider
+- Should be immutable
+- No other requirement w.r.t. format, i.e. both Matrix-style and UUIDs allowed
+- No requirement for user-readability
+- These are used for authentication and are included in MLS credentials
+
+## Display names
+
+- No strict requirement for hub/provider to have access to display names, may be
+  subject to policy
 
 # Security Considerations
 
