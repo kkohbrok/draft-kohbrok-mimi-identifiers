@@ -3,9 +3,9 @@
 
 
 More Instant Messaging Interoperability                       K. Kohbrok
-Internet-Draft                                               Phoenix R&D
-Intended status: Informational                           20 October 2025
-Expires: 23 April 2026
+Internet-Draft                                                 R. Robert
+Intended status: Informational                               Phoenix R&D
+Expires: 23 April 2026                                   20 October 2025
 
 
                             MIMI Identifiers
@@ -79,7 +79,7 @@ Table of Contents
    5.  IANA Considerations
    6.  Normative References
    Acknowledgments
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
@@ -202,8 +202,13 @@ Acknowledgments
 
    TODO acknowledge.
 
-Author's Address
+Authors' Addresses
 
    Konrad Kohbrok
    Phoenix R&D
    Email: konrad@ratchet.ing
+
+
+   Raphael Robert
+   Phoenix R&D
+   Email: ietf@raphaelrobert.com
