@@ -1,0 +1,214 @@
+
+
+
+
+More Instant Messaging Interoperability                       K. Kohbrok
+Internet-Draft                                                 R. Robert
+Intended status: Informational                               Phoenix R&D
+Expires: 23 April 2026                                   20 October 2025
+
+
+                            MIMI Identifiers
+                 draft-kohbrok-mimi-identifiers-latest
+
+Abstract
+
+   TODO Abstract
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   The latest revision of this draft can be found at
+   https://kkohbrok.github.io/draft-kohbrok-mimi-identifiers/draft-
+   kohbrok-mimi-identifiers.html.  Status information for this document
+   may be found at https://datatracker.ietf.org/doc/draft-kohbrok-mimi-
+   identifiers/.
+
+   Discussion of this document takes place on the More Instant Messaging
+   Interoperability Working Group mailing list (mailto:mimi@ietf.org),
+   which is archived at https://mailarchive.ietf.org/arch/browse/mimi/.
+   Subscribe at https://www.ietf.org/mailman/listinfo/mimi/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/kkohbrok/draft-kohbrok-mimi-identifiers.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 23 April 2026.
+
+Copyright Notice
+
+   Copyright (c) 2025 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+   2.  Identifier types
+     2.1.  Identifiers for connection establishment
+     2.2.  Administrative identifiers
+     2.3.  Display names (decorative identifiers)
+   3.  Proposal for MIMI
+     3.1.  Connection establishment
+     3.2.  Administrative identifiers
+     3.3.  Display names
+   4.  Security Considerations
+   5.  IANA Considerations
+   6.  Normative References
+   Acknowledgments
+   Authors' Addresses
+
+1.  Introduction
+
+   *  MIMI currently doesn't make assumptions about names beyond the URI
+      format introduced in [I-D.draft-ietf-mimi-protocol]
+
+   *  Different messaging applications use different schemes
+
+   *  MIMI should be able to support at least the most widely used ones
+
+2.  Identifier types
+
+2.1.  Identifiers for connection establishment
+
+   *  Globally unique
+
+   *  User-facing
+
+   *  Often chosen by user
+
+   *  Multiple identifiers per user possible
+
+   *  User can add/delete identifiers dynamically
+
+   *  Examples:
+
+      -  Phone numbers
+
+      -  Signal-style usernames
+
+      -  Matrix-style usernames
+
+      -  Administrative identifiers
+
+2.2.  Administrative identifiers
+
+   *  Globally unique
+
+   *  Generally not user-facing
+
+   *  Generally not chosen-facing
+
+   *  Can be provider-generated
+
+   *  Server might not be able to link admin to connection establishment
+      identifiers
+
+   *  Immutable
+
+   *  Examples
+
+      -  UUIDs
+
+      -  Matrix-style usernames
+
+2.3.  Display names (decorative identifiers)
+
+   *  Not globally unique
+
+   *  Not necessarily visible to provider
+
+   *  User-facing
+
+   *  User-chosen
+
+3.  Proposal for MIMI
+
+3.1.  Connection establishment
+
+   *  Multiple options for connection establishment identifiers
+
+      -  Phone numbers (draft WIP)
+
+      -  Usernames (user chosen names, potentially with format
+         restrictions)
+
+   *  No requirement for providers to be able to link connection
+      establishment identifiers with administrative identifiers
+
+   *  Ephemeral identifiers should be allowed
+
+3.2.  Administrative identifiers
+
+   *  Should be unique within domain of provider
+
+   *  Should be immutable
+
+   *  No other requirement w.r.t. format, i.e. both Matrix-style and
+      UUIDs allowed
+
+   *  No requirement for user-readability
+
+   *  These are used for authentication and are included in MLS
+      credentials
+
+3.3.  Display names
+
+   *  No strict requirement for hub/provider to have access to display
+      names, may be subject to policy
+
+4.  Security Considerations
+
+   TODO Security
+
+5.  IANA Considerations
+
+   This document has no IANA actions.
+
+6.  Normative References
+
+   [I-D.draft-ietf-mimi-protocol]
+              Barnes, R., Hodgson, M., Kohbrok, K., Mahy, R., Ralston,
+              T., and R. Robert, "More Instant Messaging
+              Interoperability (MIMI) using HTTPS and MLS", Work in
+              Progress, Internet-Draft, draft-ietf-mimi-protocol-05, 20
+              October 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-mimi-protocol-05>.
+
+Acknowledgments
+
+   TODO acknowledge.
+
+Authors' Addresses
+
+   Konrad Kohbrok
+   Phoenix R&D
+   Email: konrad@ratchet.ing
+
+
+   Raphael Robert
+   Phoenix R&D
+   Email: ietf@raphaelrobert.com
